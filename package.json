@@ -1,8 +1,8 @@
 {
-  "name": "s3-uploader",
+  "name": "s3-example",
   "version": "1.0.0",
   "description": "",
-  "main": "s3example.js",
+  "main": "s3upload.js",
   "dependencies": {
     "aws-sdk": "^2.533.0",
     "dotenv": "^8.1.0"

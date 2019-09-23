@@ -1,5 +1,5 @@
 # s3-uploader
-Quick S3 upload example
+Quick S3 example
 
 To use, add a .env file that looks like this
 
