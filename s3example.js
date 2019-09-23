@@ -19,7 +19,7 @@ function uploadToS3(bucketName, keyPrefix, filePath) {
 
     const keyName = keyPrefix + "/" + filePath;
 
-    return new Promise(function(resolve, reject) {
+    return new Promise(function (resolve, reject) {
         fileStream.once("error", reject);
         s3.upload(
             {
@@ -27,7 +27,7 @@ function uploadToS3(bucketName, keyPrefix, filePath) {
                 Key: keyName,
                 Body: fileStream
             },
-            function(err, result) {
+            function (err, result) {
                 if (err) {
                     reject(err);
                     return;
@@ -39,8 +39,8 @@ function uploadToS3(bucketName, keyPrefix, filePath) {
     });
 }
 
-uploadToS3(process.env.BUCKET, "pictures", "test.png").then(function(result){
-  console.log("Done: File is at " + result.Location);
-}).catch(function(err) {
-  console.log("Error: " + err);
+uploadToS3(process.env.BUCKET, "pictures", "test.png").then(function (result) {
+    console.log("Done: File is at " + result.Location);
+}).catch(function (err) {
+    console.log("Error: " + err);
 });
