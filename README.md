@@ -1,4 +1,4 @@
-# s3-uploader
+# s3-example
 Quick S3 example
 
 To use, add a .env file that looks like this
